@@ -23,7 +23,7 @@ namespace assignment_manager
             try
             {
                 var txt = new StringBuilder();
-                var subject = EntryField1.Text;
+                var subject = comboBox1.Text;
                 var assignment = EntryField2.Text;
                 var details = EntryField3.Text;
                 var newline = string.Format("{0},{1},{2}\n", subject, assignment,details);
@@ -41,6 +41,8 @@ namespace assignment_manager
 
         private void btn2_Click(object sender, EventArgs e)
         {
+            tabControl1.TabPages.Clear();
+
             var subjects = new Dictionary<string, ListView>();
             var csvFilePath = Environment.CurrentDirectory + "\\record.csv";
 
@@ -88,6 +90,21 @@ namespace assignment_manager
                     subjects[subject].Items.Add(item);
                 }
             }
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            var item = EntryField1.Text.Trim();
+            try
+            {
+                Lb1.Items.Add(item);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            EntryField1.Text = string.Empty;
+            comboBox1.Items.AddRange(Lb1.Items.Cast<string>().ToArray());
         }
     }
 }

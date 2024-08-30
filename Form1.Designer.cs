@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EntryField1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,15 +36,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.label3 = new System.Windows.Forms.Label();
             this.EntryField3 = new System.Windows.Forms.TextBox();
+            this.Lb1 = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.EntryField1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // EntryField1
-            // 
-            this.EntryField1.Location = new System.Drawing.Point(605, 12);
-            this.EntryField1.Name = "EntryField1";
-            this.EntryField1.Size = new System.Drawing.Size(183, 22);
-            this.EntryField1.TabIndex = 1;
-            this.EntryField1.Text = "Enter Subject Here:";
             // 
             // label1
             // 
@@ -119,11 +115,60 @@
             this.EntryField3.TabIndex = 9;
             this.EntryField3.Text = "Enter details here:";
             // 
+            // Lb1
+            // 
+            this.Lb1.FormattingEnabled = true;
+            this.Lb1.ItemHeight = 16;
+            this.Lb1.Location = new System.Drawing.Point(668, 163);
+            this.Lb1.Name = "Lb1";
+            this.Lb1.Size = new System.Drawing.Size(120, 84);
+            this.Lb1.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(449, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Subjects";
+            // 
+            // EntryField1
+            // 
+            this.EntryField1.Location = new System.Drawing.Point(605, 106);
+            this.EntryField1.Name = "EntryField1";
+            this.EntryField1.Size = new System.Drawing.Size(183, 22);
+            this.EntryField1.TabIndex = 12;
+            this.EntryField1.Text = "Enter Subjects:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(605, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(183, 24);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // btn3
+            // 
+            this.btn3.Location = new System.Drawing.Point(681, 375);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(107, 23);
+            this.btn3.TabIndex = 14;
+            this.btn3.Text = "Write to Combo";
+            this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.EntryField1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Lb1);
             this.Controls.Add(this.EntryField3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl1);
@@ -132,7 +177,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.EntryField1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -141,7 +185,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox EntryField1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Label label2;
@@ -150,6 +193,11 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox EntryField3;
+        private System.Windows.Forms.ListBox Lb1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox EntryField1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn3;
     }
 }
 
